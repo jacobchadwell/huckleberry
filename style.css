@@ -9,4 +9,71 @@ body {
   padding: 0;
 }
 
-/* Add styles here! */
+/* Reset the user-agent by setting these to 0 */
+h1, h2 {
+  margin: 0;
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  /* This helps on smaller screens / mobile */
+  padding: 0 24px;
+}
+
+.intro-chunk {
+  padding: 96px 0;
+  /* Max-width at the wrapper level keeps the overall box the correct size. Here, we're creating a sort of column for the content to live */
+  max-width: 400px;
+}
+
+.intro-chunk p {
+  font-size: 1.25rem;
+}
+
+.intro-chunk .title {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.intro-chunk strong {
+  color: hsl(160deg, 100%, 30%);
+}
+
+header {
+  border-bottom: 8px solid hsl(0deg, 0%, 40%);
+}
+
+main {
+  background-color: hsl(0deg, 0%, 60%);
+  padding: 96px 0;
+}
+
+.card {
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 24px;
+  /* If we didn't use negative margin here, the padding would offset the text from the nice line we have through the page */
+  /* Negative margin of the same value as padding allows us to eat into the margin in the max-width-wrapper */
+  margin: -24px;
+  border-bottom: 8px solid hsl(0deg, 0%, 40%);
+}
+
+.card p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.indented-heading {
+  background-color: hsl(45deg, 100%, 50%);
+  margin-left: -32px;
+  /* Could also set .card padding-top, but using margin-top here is more specific. So here, we eat into the padding by 16, leaving 8 */
+  margin-top: -16px;
+  padding: 16px 32px;
+  /* Using fit-content shrinks the box to fit the content (min-content will break the lines and max-content will spill too far) */
+  width: fit-content;
+  border-bottom: 8px solid hsl(45deg, 100%, 40%);
+}
